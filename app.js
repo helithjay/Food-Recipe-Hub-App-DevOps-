@@ -14,8 +14,8 @@ const s3 = new S3Client({ region: 'ap-south-1' });
 const db = mysql.createConnection({
   host: process.env.DB_HOST || 'mysql-db',
   user: process.env.DB_USER || 'admin',
-  password: process.env.DB_PASSWORD || 'redhat',
-  database: process.env.DB_NAME || 'movie_db',
+  password: process.env.DB_PASSWORD || 'helibuwa123',
+  database: process.env.DB_NAME || 'recipiedb',
 });
 const cors = require('cors');
 app.use(cors());
@@ -66,7 +66,7 @@ const upload = multer({
 // Helper function to upload files to S3
 const uploadToS3 = async (fileBuffer, fileName, contentType) => {
   const uploadParams = {
-    Bucket: 'moviebucketsudhanshuvlog',
+    Bucket: 'helirecipiebucket',
     Key: fileName,
     Body: fileBuffer,
     ContentType: contentType,
