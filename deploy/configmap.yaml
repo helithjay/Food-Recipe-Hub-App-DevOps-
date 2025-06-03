@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  DB_HOST: database-2.cbaw4kes2epe.ap-south-1.rds.amazonaws.com
+  DB_HOST: recipiedb.cley8sc487hw.eu-north-1.rds.amazonaws.com
   DB_USER: admin
-  DB_NAME: recipedb
-  AWS_REGION: ap-south-1
+  DB_NAME: recipiedb
+  AWS_REGION: eu-north-1
