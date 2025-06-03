@@ -42,7 +42,7 @@ The project follows a multi-container Docker architecture consisting of three ma
     - Once you have forked the repo on your github account, Clone the repo in your system
         ```bash
         git clone <your repo URL>
-        cd Food-Recipe-Hub-App--DevOps
+        cd Food-Recipe-Hub-App-DevOps-
         ```
 
 2. **Launch Server**
