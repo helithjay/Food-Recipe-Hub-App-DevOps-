@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Recipe</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #141414;
+            color: #fff;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #e9d7d8;
+            margin-bottom: 20px;
+        }
+        video {
+            width: 100%;
+            max-width: 960px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+        .recipe-info {
+            margin-top: 20px;
+            font-size: 1.2em;
+            text-align: center;
+            color: #ccc;
+        }
+        p#error-message {
+            text-align: center;
+            color: rgb(214, 189, 189);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Watch Recipe</h1>
+        <div class="recipe-info" id="recipe-info">
+            <video id="recipe-video" controls></video>
+            <p id="recipe-description"></p>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'localhost'; // Replace with your backend host
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const movieId = urlParams.get('id');
+
+        if (movieId) {
+            fetch(`http://${API_URL}:3000/recipes/${recipeId}`)
+                .then(response => response.json())
+                .then(recipe => {
+                    const videoElement = document.getElementById('recipe-video');
+                    const descriptionElement = document.getElementById('recipe-description');
+
+                    videoElement.src = recipe.video_url;
+                    descriptionElement.textContent = `${recipe.title} (${recipe.release_year}) - ${recipe.genre}`;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    document.getElementById('recipe-info').innerHTML = '<p id="error-message">Error loading recipe.</p>';
+                });
+        } else {
+            document.getElementById('recipe-info').innerHTML = '<p id="error-message">Recipe ID not provided 😟.</p>';
+        }
+    </script>
+</body>
+</html>
