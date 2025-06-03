@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'jenkins Worker' }
+  agent { label 'ec2' }
 
   stages {
     stage('Checkout') {
