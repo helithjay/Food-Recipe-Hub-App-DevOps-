@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: web
-        image: helijay/movie-streaming-frontend:latest
+        image: helijay/recipe-streaming-frontend:latest
         ports:
         - containerPort: 80
         env:
