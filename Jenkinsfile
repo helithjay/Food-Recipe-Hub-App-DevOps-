@@ -4,7 +4,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git branch: 'dev', url: 'https://github.com/helijay/Food-Recipe-Hub-App(DevOps).git'
+        git branch: 'dev', url: 'https://github.com/helithjay/Food-Recipe-Hub-App-DevOps-.git'
       }
     }
     stage('Unit Tests') {
