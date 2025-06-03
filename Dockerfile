@@ -18,8 +18,8 @@ EXPOSE 3000
 
 # Set environment variables for the MySQL connection
 ENV DB_USER=admin
-ENV DB_PASSWORD=1234
-ENV DB_NAME=recipe_db
+ENV DB_PASSWORD=helibuwa123
+ENV DB_NAME=recipiedb
 ENV AWS_REGION=eu-north-1
 
 # Start the application
