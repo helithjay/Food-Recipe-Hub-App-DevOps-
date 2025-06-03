@@ -106,13 +106,9 @@ The project follows a multi-container Docker architecture consisting of three ma
 
         - Jenkins will Deploy the application on EKS cluster. `/deploy` directory has all the k8s yaml scripts.
 
-7. **Latest Docker Image**
-- My Latest docker image for this project are present here, You can use this image as well, If you don't wanted to build your own image
-    - https://hub.docker.com/r/helijay/helijay/recipe-streaming-frontend
-    - https://hub.docker.com/r/jinny1/helijay/recipe-streaming-backend-nodejs
 
 
-8. **Contact**
+7. **Contact**
     For any inquiries or issues, please contact [me](https://www.linkedin.com/in/helith-jayasuriya/)
 
 
